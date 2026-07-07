@@ -45,7 +45,7 @@ def open_login():
                     f"Welcome back, {username}!"
                 )
 
-                open_dashboard(username)
+                open_dashboard(user)
                 window.destroy()
                 return
 
@@ -57,6 +57,6 @@ def open_login():
     tk.Button(
         window,
         text="Login",
-        command=login,
-        width=20
+        width=20,
+        command=login
     ).pack(pady=20)

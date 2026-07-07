@@ -1,71 +1,103 @@
 import tkinter as tk
+from quiz import open_quiz
 
 
-def open_dashboard(username):
+def open_dashboard(user):
 
     window = tk.Toplevel()
-    window.title("🐺 CodeWolf Dashboard")
+    window.title("🐺 CodeWolf AI Dashboard")
     window.geometry("700x500")
     window.configure(bg="#202124")
 
-    title = tk.Label(
+    tk.Label(
         window,
-        text=f"🐺 Welcome, {username}!",
+        text=f"🐺 Welcome, {user['username']}!",
         font=("Arial", 24, "bold"),
         bg="#202124",
         fg="white"
-    )
-    title.pack(pady=20)
+    ).pack(pady=20)
 
     tk.Label(
         window,
-        text="Rank: 🐺 Wolf Pup",
+        text=f"🏅 Rank: {user['rank']}",
         font=("Arial", 16),
         bg="#202124",
         fg="white"
-    ).pack(pady=5)
+    ).pack()
 
     tk.Label(
         window,
-        text="XP: 0 / 100",
+        text=f"⭐ XP: {user['xp']}",
         font=("Arial", 16),
         bg="#202124",
         fg="white"
-    ).pack(pady=5)
+    ).pack()
 
     tk.Label(
         window,
-        text="Coins: 0",
+        text=f"🪙 Coins: {user['coins']}",
         font=("Arial", 16),
         bg="#202124",
         fg="white"
+    ).pack()
+
+    tk.Label(
+        window,
+        text=f"🔥 Streak: {user['streak']} Days",
+        font=("Arial", 16),
+        bg="#202124",
+        fg="white"
+    ).pack()
+
+    tk.Label(
+        window,
+        text=f"🌍 World: {user['current_world']}",
+        font=("Arial", 16),
+        bg="#202124",
+        fg="white"
+    ).pack()
+
+    tk.Label(
+        window,
+        text=f"📚 Lesson: {user['current_lesson']}",
+        font=("Arial", 16),
+        bg="#202124",
+        fg="white"
+    ).pack(pady=(0, 15))
+
+    tk.Button(
+        window,
+        text="📚 Continue Learning",
+        width=30,
+        height=2
     ).pack(pady=5)
 
     tk.Button(
         window,
-        text="📚 Learn Python",
-        width=25,
-        height=2
-    ).pack(pady=10)
+        text="🧠 Python Placement Quiz",
+        width=30,
+        height=2,
+        command=lambda: open_quiz(user)
+    ).pack(pady=5)
 
     tk.Button(
         window,
-        text="🧠 Python Quiz",
-        width=25,
+        text="🤖 AI Tutor (Coming Soon)",
+        width=30,
         height=2
-    ).pack(pady=10)
+    ).pack(pady=5)
 
     tk.Button(
         window,
-        text="🤖 AI Tutor",
-        width=25,
+        text="⚙️ Settings",
+        width=30,
         height=2
-    ).pack(pady=10)
+    ).pack(pady=5)
 
     tk.Button(
         window,
         text="🚪 Logout",
-        width=25,
+        width=30,
         height=2,
         command=window.destroy
     ).pack(pady=20)
