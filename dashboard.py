@@ -1,12 +1,13 @@
 import tkinter as tk
 from quiz import open_quiz
+from lesson1 import open_lesson1
 
 
 def open_dashboard(user):
 
     window = tk.Toplevel()
     window.title("🐺 CodeWolf AI Dashboard")
-    window.geometry("700x500")
+    window.geometry("700x550")
     window.configure(bg="#202124")
 
     tk.Label(
@@ -63,13 +64,14 @@ def open_dashboard(user):
         font=("Arial", 16),
         bg="#202124",
         fg="white"
-    ).pack(pady=(0, 15))
+    ).pack(pady=(0, 20))
 
     tk.Button(
         window,
         text="📚 Continue Learning",
         width=30,
-        height=2
+        height=2,
+        command=lambda: open_lesson1(user)
     ).pack(pady=5)
 
     tk.Button(
@@ -82,14 +84,14 @@ def open_dashboard(user):
 
     tk.Button(
         window,
-        text="🤖 AI Tutor (Coming Soon)",
+        text="🤖 Luna AI Tutor (Coming Soon)",
         width=30,
         height=2
     ).pack(pady=5)
 
     tk.Button(
         window,
-        text="⚙️ Settings",
+        text="⚙ Settings",
         width=30,
         height=2
     ).pack(pady=5)
