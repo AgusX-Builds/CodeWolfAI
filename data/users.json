@@ -1,0 +1,35 @@
+[
+    {
+        "username": "AgusX D.I.Y",
+        "password": "youtube",
+        "xp": 0,
+        "coins": 0,
+        "level": "Beginner"
+    },
+    {
+        "username": "AgusX",
+        "password": "medialab",
+        "xp": 0,
+        "coins": 0,
+        "level": "Beginner"
+    },
+    {
+        "username": "Agustin",
+        "password": "1234",
+        "xp": 0,
+        "coins": 0,
+        "level": "Beginner"
+    },
+    {
+        "username": "noob1234",
+        "password": "1234",
+        "xp": 0,
+        "coins": 0,
+        "rank": "Wolf Pup",
+        "quiz_completed": false,
+        "current_world": 1,
+        "current_lesson": 1,
+        "badges": [],
+        "streak": 0
+    }
+]
