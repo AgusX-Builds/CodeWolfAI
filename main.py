@@ -1,62 +1,54 @@
 import tkinter as tk
-from create_account import open_create_account
-from login import open_login
+from screens.login import open_login
 
 
 class CodeWolfAI:
 
-    def __init__(self, root):
+    def __init__(self):
 
-        self.root = root
+        self.root = tk.Tk()
         self.root.title("🐺 CodeWolf AI")
-        self.root.geometry("700x500")
+        self.root.geometry("900x600")
         self.root.configure(bg="#202124")
 
-        title = tk.Label(
-            root,
+        tk.Label(
+            self.root,
             text="🐺 CodeWolf AI",
-            font=("Arial", 28, "bold"),
+            font=("Arial", 30, "bold"),
             bg="#202124",
             fg="white"
-        )
+        ).pack(pady=40)
 
-        title.pack(pady=20)
-
-        subtitle = tk.Label(
-            root,
-            text="Learn. Build. Conquer.",
-            font=("Arial", 14),
+        tk.Label(
+            self.root,
+            text="Learn Python with Luna!",
+            font=("Arial", 16),
             bg="#202124",
-            fg="lightgray"
-        )
-
-        subtitle.pack(pady=10)
+            fg="white"
+        ).pack(pady=10)
 
         tk.Button(
-            root,
-            text="🔐 Login",
-            width=25,
+            self.root,
+            text="🚀 Start",
+            font=("Arial", 16),
+            width=20,
             height=2,
             command=open_login
-        ).pack(pady=10)
+        ).pack(pady=30)
 
         tk.Button(
-            root,
-            text="👤 Create Account",
-            width=25,
-            height=2,
-            command=open_create_account
-        ).pack(pady=10)
-
-        tk.Button(
-            root,
+            self.root,
             text="❌ Exit",
-            width=25,
+            font=("Arial", 16),
+            width=20,
             height=2,
-            command=root.destroy
-        ).pack(pady=10)
+            command=self.root.destroy
+        ).pack()
+
+    def run(self):
+        self.root.mainloop()
 
 
-root = tk.Tk()
-app = CodeWolfAI(root)
-root.mainloop()
+if __name__ == "__main__":
+    app = CodeWolfAI()
+    app.run()

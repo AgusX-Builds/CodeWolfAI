@@ -1,6 +1,9 @@
 import tkinter as tk
 from tkinter import messagebox
 
+from save_manager import save_user
+from achievements import check_achievements
+
 
 def open_lesson1(user):
 
@@ -67,6 +70,9 @@ Alex
 
             user["xp"] += 10
             user["coins"] += 5
+
+            save_user(user)
+            check_achievements(user)
 
             messagebox.showinfo(
                 "Great Job!",

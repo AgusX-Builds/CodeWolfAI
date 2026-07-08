@@ -23,13 +23,15 @@
     {
         "username": "noob1234",
         "password": "1234",
-        "xp": 0,
-        "coins": 0,
+        "xp": 65,
+        "coins": 30,
         "rank": "Wolf Pup",
         "quiz_completed": false,
         "current_world": 1,
         "current_lesson": 1,
-        "badges": [],
+        "badges": [
+            "First Lesson"
+        ],
         "streak": 0
     }
 ]

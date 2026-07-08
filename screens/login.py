@@ -3,7 +3,7 @@ from tkinter import messagebox
 import json
 import os
 
-from dashboard import open_dashboard
+from screens.dashboard import open_dashboard
 
 
 def open_login():
